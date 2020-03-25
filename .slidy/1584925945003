@@ -1,0 +1,2 @@
+lib/app/shared/utils/remove_event_dialog/remove_event_dialog_widget.dart
+test/app/shared/utils/remove_event_dialog/remove_event_dialog_widget_test.dart

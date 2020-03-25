@@ -1,0 +1,2 @@
+lib/app/modules/home/components/tracked_event_controller.dart
+test/app/modules/home/components/tracked_event_controller_test.dart

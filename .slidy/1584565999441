@@ -1,0 +1,4 @@
+lib/app/modules/home/components/bottom_bar/bottom_bar_widget.dart
+test/app/modules/home/components/bottom_bar/bottom_bar_widget_test.dart
+lib/app/modules/home/components/bottom_bar/bottom_bar_controller.dart
+test/app/modules/home/components/bottom_bar/bottom_bar_controller_test.dart

@@ -1,0 +1,2 @@
+lib/app/modules/topics/components/topics_list_item/topics_list_item_widget.dart
+test/app/modules/topics/components/topics_list_item/topics_list_item_widget_test.dart

@@ -1,0 +1,2 @@
+lib/app/modules/home/components/tracked_item/tracked_item/tracked_item_widget.dart
+test/app/modules/home/components/tracked_item/tracked_item/tracked_item_widget_test.dart

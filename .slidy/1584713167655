@@ -1,0 +1,4 @@
+lib/app/modules/topics/components/topics_list/topics_list_widget.dart
+test/app/modules/topics/components/topics_list/topics_list_widget_test.dart
+lib/app/modules/topics/components/topics_list/topics_list_controller.dart
+test/app/modules/topics/components/topics_list/topics_list_controller_test.dart
