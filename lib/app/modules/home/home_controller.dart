@@ -48,6 +48,8 @@ abstract class _HomeControllerBase with Store {
 
   @computed
   bool get timerIsRunning => timeService.isRunning;
+  @computed
+  bool get isPaused => !timerIsRunning && hasElapsedTime;
 
   // EVENTS ACTIONS
   @action

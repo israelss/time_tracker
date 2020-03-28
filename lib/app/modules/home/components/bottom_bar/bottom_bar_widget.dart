@@ -38,8 +38,8 @@ class BottomBarWidget extends StatelessWidget {
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
                 textColor: Colors.white,
                 onPressed: controller.hasElapsedTime ? _showAddEventDialog : null,
-                icon: Icon(Icons.add_box),
-                label: Text('Salvar'),
+                icon: const Icon(Icons.add_box),
+                label: const Text('Salvar'),
               ),
               FlatButton(
                 color: Colors.deepPurpleAccent.shade700,
