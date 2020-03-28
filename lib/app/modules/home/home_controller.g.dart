@@ -27,6 +27,11 @@ mixin _$HomeController on _HomeControllerBase, Store {
   bool get timerIsRunning =>
       (_$timerIsRunningComputed ??= Computed<bool>(() => super.timerIsRunning))
           .value;
+  Computed<bool> _$isPausedComputed;
+
+  @override
+  bool get isPaused =>
+      (_$isPausedComputed ??= Computed<bool>(() => super.isPaused)).value;
   Computed<ObservableList<TrackedEventModel>> _$listComputed;
 
   @override
@@ -142,7 +147,7 @@ mixin _$HomeController on _HomeControllerBase, Store {
   @override
   String toString() {
     final string =
-        'hasElapsedTime: ${hasElapsedTime.toString()},getElapsedTime: ${getElapsedTime.toString()},timerIsRunning: ${timerIsRunning.toString()},list: ${list.toString()},getEventListLength: ${getEventListLength.toString()},topicsList: ${topicsList.toString()},unit: ${unit.toString()}';
+        'hasElapsedTime: ${hasElapsedTime.toString()},getElapsedTime: ${getElapsedTime.toString()},timerIsRunning: ${timerIsRunning.toString()},isPaused: ${isPaused.toString()},list: ${list.toString()},getEventListLength: ${getEventListLength.toString()},topicsList: ${topicsList.toString()},unit: ${unit.toString()}';
     return '{$string}';
   }
 }
