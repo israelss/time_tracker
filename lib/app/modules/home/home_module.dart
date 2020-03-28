@@ -1,9 +1,10 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:time_tracker/app/modules/home/home_controller.dart';
-import 'package:time_tracker/app/modules/home/home_page.dart';
-import 'package:time_tracker/app/modules/topics/topics_module.dart';
-import 'package:time_tracker/app/shared/services/local_storage_service.dart';
-import 'package:time_tracker/app/shared/services/time_tracker_service.dart';
+
+import '../../modules/topics/topics_module.dart';
+import '../../shared/services/db/local_storage_service.dart';
+import '../../shared/services/time_tracker_service.dart';
+import 'home_controller.dart';
+import 'home_page.dart';
 
 class HomeModule extends ChildModule {
   @override

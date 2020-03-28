@@ -1,7 +1,10 @@
 name: time_tracker
-description: Um app simples para rastrear o tempo de estudos.
+description: Um app simples para rastrear o tempo gasto em alguma atividade.
 
-version: 1.0.0
+version: "0.1.0"
+
+repository: "https://github.com/israelss/time_tracker"
+issue_tracker: "https://github.com/israelss/time_tracker/issues"
 
 environment:
   sdk: ">=2.5.2 <3.0.0"
@@ -38,6 +41,7 @@ scripts:
   clean: flutter pub run build_runner clean
   build_icons: flutter pub run flutter_launcher_icons:main
   release: flutter build apk --release --target-platform android-arm64
+  clean_release: slidy run clean && slidy run build && slidy run build_icons && flutter build apk --release --target-platform android-arm64
 
 flutter:
   uses-material-design: true

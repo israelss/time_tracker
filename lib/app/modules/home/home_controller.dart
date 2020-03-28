@@ -1,8 +1,9 @@
 import 'package:mobx/mobx.dart';
-import 'package:time_tracker/app/shared/models/topic_model.dart';
-import 'package:time_tracker/app/shared/models/tracked_event_model.dart';
-import 'package:time_tracker/app/shared/services/local_storage_service.dart';
-import 'package:time_tracker/app/shared/services/time_tracker_service.dart';
+
+import 'models/tracked_event_model.dart';
+import '../../modules/topics/models/topic_model.dart';
+import '../../shared/services/db/local_storage_service.dart';
+import '../../shared/services/time_tracker_service.dart';
 
 part 'home_controller.g.dart';
 
@@ -84,8 +85,8 @@ abstract class _HomeControllerBase with Store {
 
   @action
   changeUnit() {
-    _unit = _units[_nextUnit];
     _nextUnit = (_nextUnit + 1) == _units.length ? 0 : _nextUnit + 1;
+    _unit = _units[_nextUnit];
   }
 
   @observable
