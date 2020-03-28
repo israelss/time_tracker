@@ -10,10 +10,8 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       navigatorKey: Get.key,
       navigatorObservers: [routeObserver],
-      title: 'TimeTracker',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
+      title: 'Time Tracker',
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,
     );
