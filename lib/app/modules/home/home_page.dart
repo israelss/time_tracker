@@ -11,21 +11,17 @@ import 'home_module.dart';
 final HomeController controller = HomeModule.to.get<HomeController>();
 
 class HomePage extends StatelessWidget {
-  HomePage({Key key, this.title = "Time Tracker"});
-
-  final String title;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
-        title: Text(title),
+        title: const Text('Time Tracker'),
         actions: <Widget>[
           FlatButton(
             color: Colors.green,
             onPressed: () => Get.toNamed('/topicsList'),
-            child: 'Tópicos'.text.size(15).wide.make(),
+            child: const Text('Tópicos').text.size(15).wide.make(),
           )
         ],
       ),
@@ -37,18 +33,16 @@ class HomePage extends StatelessWidget {
           );
         },
       ),
-      bottomNavigationBar: BottomBarWidget(),
+      bottomNavigationBar: const BottomBarWidget(),
       floatingActionButton: Observer(builder: (_) {
         return AnimatedOpacity(
             duration: kFloatingActionButtonSegue,
-            opacity: !controller.timerIsRunning && controller.hasElapsedTime ? 1.0 : 0.0,
-            child: Visibility(
-              visible: !controller.timerIsRunning,
-              child: FloatingActionButton(
-                onPressed: controller.resetTimer,
-                child: Icon(Icons.restore),
-                backgroundColor: Colors.redAccent,
-              ),
+            opacity: controller.isPaused ? 1.0 : 0.0,
+            child: FloatingActionButton(
+              heroTag: 'resetFab',
+              onPressed: controller.isPaused ? controller.resetTimer : null,
+              child: const Icon(Icons.restore),
+              backgroundColor: Colors.redAccent,
             ));
       }),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,

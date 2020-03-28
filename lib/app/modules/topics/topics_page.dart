@@ -10,19 +10,20 @@ import 'utils/dialogs/add_topic_dialog_widget.dart';
 TopicsController controller = TopicsModule.to.get<TopicsController>();
 
 class TopicsPage extends StatelessWidget {
-  TopicsPage({Key key, this.title = "Editar tópicos"});
-
-  final String title;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(title),
+        title: const Text('Editar tópicos'),
         automaticallyImplyLeading: false,
         leading: _buildTopicsPageLeading(),
-        actions: <Widget>[FlatButton(child: Icon(Icons.close, color: Colors.white), onPressed: () => Get.back())],
+        actions: <Widget>[
+          FlatButton(
+            child: const Icon(Icons.close, color: Colors.white),
+            onPressed: () => Get.back(),
+          ),
+        ],
       ),
       body: Observer(
         builder: (_) {
@@ -34,7 +35,7 @@ class TopicsPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Get.dialog(AddTopicDialogWidget(), barrierDismissible: false),
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -58,15 +59,15 @@ void _removeAllTopics() async {
     cancel: RaisedButton(
       color: Colors.deepPurple,
       onPressed: () => Get.back(),
-      child: Text('Não'),
+      child: const Text('Não'),
     ),
     confirm: FlatButton(
         onPressed: () {
           controller.removeAll();
           Get.back();
         },
-        child: Text('Sim')),
-    content: Text('Deseja realmente excluir todos os tópicos?'),
+        child: const Text('Sim')),
+    content: const Text('Deseja realmente excluir todos os tópicos?'),
     title: 'Confirmar',
   );
 }
